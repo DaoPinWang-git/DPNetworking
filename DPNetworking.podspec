@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DPNetworking"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "二次封装AFNetworking"
 
   # This description is used to generate tags and improve search results.
@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/DaoPinWong/DPNetworking.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'DPNetworking/Classes/**/*.{h,m}'
+  s.source_files = 'DPNetworking/Classes/*.{h,m}'
   s.dependency 'AFNetworking'
 
 end
