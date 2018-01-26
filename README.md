@@ -27,8 +27,8 @@ pod "DPNetworking"
 #import "DPNetworking.h"
 
 
-  // 单例
-    /************** 以下只是举例，请跟进自身需要配置 **************/
+  // 单例  只需要配置一次
+    /************** 以下只是举例，请根据自身需要配置 **************/
     // 通用网络请求设置
     DPNetConfig *config = [DPNetConfig sharedManager];
 
@@ -62,7 +62,7 @@ pod "DPNetworking"
     
     [DPNetworking get:@"xxxx"
                handle:^(DPNetworking * _Nonnull handle) {
-                   // 如果对本次请求需要什么特殊设置，可以再此处设置
+                   // 如果对本次请求需要什么特殊设置，可以在此处设置
                    handle.requestSerializer.timeoutInterval = 15.f;
                    [handle.requestSerializer setValue:@"1" forHTTPHeaderField:@"status"];
                }
