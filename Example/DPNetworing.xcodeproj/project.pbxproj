@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3B0F5A2543C6862928AA441D /* libPods-DPNetworing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC39B2808D7B1046CB937781 /* libPods-DPNetworing.a */; };
-		6101719F2016D33300773A10 /* DPNetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6101719E2016D33300773A10 /* DPNetConfig.m */; };
+		610171AA2019A2F100773A10 /* DPNetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 610171A52019A2F100773A10 /* DPNetConfig.m */; };
+		610171AB2019A2F100773A10 /* NSDictionary+DPReplacingNulls.m in Sources */ = {isa = PBXBuildFile; fileRef = 610171A72019A2F100773A10 /* NSDictionary+DPReplacingNulls.m */; };
+		610171AC2019A2F100773A10 /* DPNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 610171A92019A2F100773A10 /* DPNetworking.m */; };
 		612F94CD20108EB500A9C0EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 612F94CC20108EB500A9C0EE /* AppDelegate.m */; };
 		612F94D020108EB500A9C0EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612F94CF20108EB500A9C0EE /* ViewController.m */; };
 		612F94D320108EB500A9C0EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612F94D120108EB500A9C0EE /* Main.storyboard */; };
@@ -17,8 +19,6 @@
 		612F94DB20108EB500A9C0EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 612F94DA20108EB500A9C0EE /* main.m */; };
 		612F94E520108EB500A9C0EE /* DPNetworingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 612F94E420108EB500A9C0EE /* DPNetworingTests.m */; };
 		612F94F020108EB500A9C0EE /* DPNetworingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 612F94EF20108EB500A9C0EE /* DPNetworingUITests.m */; };
-		612F950120108FDA00A9C0EE /* DPNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 612F950020108FDA00A9C0EE /* DPNetworking.m */; };
-		612F9504201094FE00A9C0EE /* NSDictionary+DPReplacingNulls.m in Sources */ = {isa = PBXBuildFile; fileRef = 612F9503201094FE00A9C0EE /* NSDictionary+DPReplacingNulls.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,12 @@
 /* Begin PBXFileReference section */
 		46B17A2D69364C6D33A808AC /* Pods-DPNetworing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DPNetworing.release.xcconfig"; path = "Pods/Target Support Files/Pods-DPNetworing/Pods-DPNetworing.release.xcconfig"; sourceTree = "<group>"; };
 		58C8BC67DB4A039CDF1C3550 /* Pods-DPNetworing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DPNetworing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DPNetworing/Pods-DPNetworing.debug.xcconfig"; sourceTree = "<group>"; };
-		6101719D2016D33300773A10 /* DPNetConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPNetConfig.h; sourceTree = "<group>"; };
-		6101719E2016D33300773A10 /* DPNetConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPNetConfig.m; sourceTree = "<group>"; };
+		610171A42019A2F100773A10 /* NSDictionary+DPReplacingNulls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DPReplacingNulls.h"; sourceTree = "<group>"; };
+		610171A52019A2F100773A10 /* DPNetConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPNetConfig.m; sourceTree = "<group>"; };
+		610171A62019A2F100773A10 /* DPNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPNetworking.h; sourceTree = "<group>"; };
+		610171A72019A2F100773A10 /* NSDictionary+DPReplacingNulls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DPReplacingNulls.m"; sourceTree = "<group>"; };
+		610171A82019A2F100773A10 /* DPNetConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPNetConfig.h; sourceTree = "<group>"; };
+		610171A92019A2F100773A10 /* DPNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPNetworking.m; sourceTree = "<group>"; };
 		612F94C820108EB500A9C0EE /* DPNetworing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DPNetworing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		612F94CB20108EB500A9C0EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		612F94CC20108EB500A9C0EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,10 +63,6 @@
 		612F94EB20108EB500A9C0EE /* DPNetworingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DPNetworingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		612F94EF20108EB500A9C0EE /* DPNetworingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPNetworingUITests.m; sourceTree = "<group>"; };
 		612F94F120108EB500A9C0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		612F94FF20108FDA00A9C0EE /* DPNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPNetworking.h; sourceTree = "<group>"; };
-		612F950020108FDA00A9C0EE /* DPNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPNetworking.m; sourceTree = "<group>"; };
-		612F9502201094FE00A9C0EE /* NSDictionary+DPReplacingNulls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DPReplacingNulls.h"; sourceTree = "<group>"; };
-		612F9503201094FE00A9C0EE /* NSDictionary+DPReplacingNulls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DPReplacingNulls.m"; sourceTree = "<group>"; };
 		CC39B2808D7B1046CB937781 /* libPods-DPNetworing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DPNetworing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +92,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		610171A32019A2F100773A10 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				610171A42019A2F100773A10 /* NSDictionary+DPReplacingNulls.h */,
+				610171A72019A2F100773A10 /* NSDictionary+DPReplacingNulls.m */,
+				610171A82019A2F100773A10 /* DPNetConfig.h */,
+				610171A52019A2F100773A10 /* DPNetConfig.m */,
+				610171A62019A2F100773A10 /* DPNetworking.h */,
+				610171A92019A2F100773A10 /* DPNetworking.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		612F94BF20108EB500A9C0EE = {
 			isa = PBXGroup;
 			children = (
@@ -152,12 +165,7 @@
 		612F94FE20108FBF00A9C0EE /* DPNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				612F94FF20108FDA00A9C0EE /* DPNetworking.h */,
-				612F950020108FDA00A9C0EE /* DPNetworking.m */,
-				612F9502201094FE00A9C0EE /* NSDictionary+DPReplacingNulls.h */,
-				612F9503201094FE00A9C0EE /* NSDictionary+DPReplacingNulls.m */,
-				6101719D2016D33300773A10 /* DPNetConfig.h */,
-				6101719E2016D33300773A10 /* DPNetConfig.m */,
+				610171A32019A2F100773A10 /* Classes */,
 			);
 			name = DPNetworking;
 			path = ../../DPNetworking;
@@ -367,12 +375,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				610171AB2019A2F100773A10 /* NSDictionary+DPReplacingNulls.m in Sources */,
 				612F94D020108EB500A9C0EE /* ViewController.m in Sources */,
-				612F950120108FDA00A9C0EE /* DPNetworking.m in Sources */,
+				610171AA2019A2F100773A10 /* DPNetConfig.m in Sources */,
 				612F94DB20108EB500A9C0EE /* main.m in Sources */,
-				6101719F2016D33300773A10 /* DPNetConfig.m in Sources */,
-				612F9504201094FE00A9C0EE /* NSDictionary+DPReplacingNulls.m in Sources */,
 				612F94CD20108EB500A9C0EE /* AppDelegate.m in Sources */,
+				610171AC2019A2F100773A10 /* DPNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
