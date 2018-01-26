@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "DPNetworking"
   s.version      = "0.0.2"
-  s.summary      = "二次封装AFNetworking"
+  s.summary      = "对AFNetworking做的二次封装，一句代码发起网络请求。"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,8 +25,8 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  二次封装AFNetworking
-                   DESC
+  对AFNetworking做的二次封装，一句代码发起网络请求。 
+  DESC
 
   s.homepage     = "https://github.com/DaoPinWong/DPNetworking"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
