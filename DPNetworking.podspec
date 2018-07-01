@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DPNetworking"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "对AFNetworking做的二次封装，一句代码发起网络请求。"
 
   # This description is used to generate tags and improve search results.

@@ -53,33 +53,39 @@
 
 
 
-
 + (void)success:(void (^)(id responseObject))success task:(NSURLSessionDataTask *)task responseObject:(id)responseObject{
-    DPNetConfig *config = [DPNetConfig sharedManager];
     
-    if (!config.successBlock) {
+    if (success) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            success([(NSDictionary *)responseObject dictionaryByReplacingNullsWithBlanks]);
+        }else if ([responseObject isKindOfClass:[NSArray class]]){
+            success([(NSArray *)responseObject arrayByReplacingNullsWithBlanks]);
+        }else{
+            success(responseObject);
+        }
         return;
     }
+    DPNetConfig *config = [DPNetConfig sharedManager];
     
-    if ([responseObject isKindOfClass:[NSDictionary class]]) {
-        success([(NSDictionary *)responseObject dictionaryByReplacingNullsWithBlanks]);
-    }else if ([responseObject isKindOfClass:[NSArray class]]){
-        success([(NSArray *)responseObject arrayByReplacingNullsWithBlanks]);
-    }else{
-        success(responseObject);
+    if (config.successBlock) {
+        config.successBlock(task, responseObject);
+        
     }
     
 }
 
 
 + (void)failure:(void (^)(id error))failure task:(NSURLSessionDataTask *)task error:(NSError *)error{
-    DPNetConfig *config = [DPNetConfig sharedManager];
-    
-    if (!config.failureBlock) {
+    if (failure) {
+        failure(error);
         return;
     }
     
-    failure(error);
+    DPNetConfig *config = [DPNetConfig sharedManager];
+    if (config.failureBlock) {
+        config.failureBlock(task, error);
+    }
+    
 }
 
 //get 请求
@@ -98,7 +104,13 @@
     success:(void(^)(id responseObject))success
     failure:(void(^)(id error))failure{
     
-    [[DPNetworking manager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    DPNetworking *networking= [DPNetworking manager];
+    
+    if (handle) {
+        handle(networking);
+    }
+    
+    [networking GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -125,7 +137,14 @@
      success:(void (^)(id responseObject))success
      failure:(void (^)(id error))failure{
     
-    [[DPNetworking manager] POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    
+    DPNetworking *networking= [DPNetworking manager];
+    
+    if (handle) {
+        handle(networking);
+    }
+    
+    [networking POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -153,7 +172,13 @@
       success:(void (^)(id responseObject))success
       failure:(void (^)(id error))failure{
     
-    [[DPNetworking manager] PATCH:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    DPNetworking *networking= [DPNetworking manager];
+    
+    if (handle) {
+        handle(networking);
+    }
+    
+    [networking PATCH:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [DPNetworking success:success task:task responseObject:responseObject];
         
@@ -178,7 +203,13 @@
     success:(void (^)(id responseObject))success
     failure:(void (^)(id error))failure{
     
-    [[DPNetworking manager] PUT:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    DPNetworking *networking= [DPNetworking manager];
+    
+    if (handle) {
+        handle(networking);
+    }
+    
+    [networking PUT:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [DPNetworking success:success task:task responseObject:responseObject];
         
@@ -204,7 +235,13 @@
     success:(void (^)(id responseObject))success
     failure:(void (^)(id error))failure{
     
-    [[DPNetworking manager] DELETE:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    DPNetworking *networking= [DPNetworking manager];
+    
+    if (handle) {
+        handle(networking);
+    }
+    
+    [networking DELETE:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [DPNetworking success:success task:task responseObject:responseObject];
         
