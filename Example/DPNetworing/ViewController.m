@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // 单例
-    /************** 以下只是举例，请跟进自身需要配置 **************/
+    /************** 以下只是举例，请根据自身需要配置 **************/
     // 通用网络请求设置
     DPNetConfig *config = [DPNetConfig sharedManager];
 
